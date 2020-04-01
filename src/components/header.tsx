@@ -1,37 +1,28 @@
-import { Link } from "gatsby"
-import React from "react"
+import BrandLogo from 'assets/svg/j-logo-black.svg';
+import { Link } from 'components/link/Link';
+import * as React from 'react';
 
-interface Props {
-  siteTitle: string
+import s from './Header.scss';
+
+interface IHeaderProps {
+  children: React.ReactNode;
 }
 
-const Header: React.FC<Props> = ({ siteTitle = "" }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
+export const Header = ({ children }: IHeaderProps) => (
+  <header className={s.header}>
+    <div className={s.header__container}>
+      <div className={s.header__content}>
         <Link
           to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
+          className={s.header__logo}
         >
-          {siteTitle}
+          <BrandLogo className={s.header__logoSvg} />
         </Link>
-      </h1>
+
+        <div className={s.header__navigation}>
+          {children}
+        </div>
+      </div>
     </div>
   </header>
-)
-
-export default Header
+);

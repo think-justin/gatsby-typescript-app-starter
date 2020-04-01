@@ -8,7 +8,9 @@
     "@reach/router": "^1.2.1",
     "gatsby": "^2.15.24",
     "gatsby-plugin-react-helmet": "^3.1.8",
+    "gatsby-plugin-sass": "^2.2.1",
     "gatsby-plugin-typescript": "^2.1.9",
+    "node-sass": "^4.13.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1"
@@ -25,6 +27,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.15.1",
+    "gatsby-plugin-root-import": "^2.0.5",
     "prettier": "^1.18.2",
     "typescript": "^3.6.3"
   },
